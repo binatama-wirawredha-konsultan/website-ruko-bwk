@@ -1,0 +1,428 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 80px;
+}
+
+header {
+    background: #fff;
+    color: #333;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+header nav a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+img {
+    width:32px;
+    height:32px;
+    object-fit:cover;
+    border:2px solid #fff;
+    vertical-align:middle;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 22px;
+    border-radius: 999px; /* bikin bulat pill */
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.menu a.active {
+    background: #181c1e;
+    color: #fff;
+}
+
+.menu a:hover {
+    background: #e5e5e5;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.layout-divider-3 { 
+    width:98%; /* Mengurangi lebar agar ada sisa putih di kiri-kanan */
+    border-radius: 999px;
+    margin-left: auto; /* Pusatkan ke tengah */
+    margin-right: auto;
+    height: 8px;
+    margin-top: 40px;
+    margin-bottom: 0 auto;
+    background: linear-gradient(to right, 
+        transparent 0%, 
+        transparent 0%, 
+        #b8b5ad 0%, 
+        #b8b5ad 100%
+    );
+}
+
+/* TITLE */
+.informasi-kantor {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.informasi-title h1 {
+    font-size: 48px;
+    letter-spacing: 6px;
+    color: #2f3a40;
+}
+
+.harga-section-container {
+    display: flex;
+    flex-wrap: wrap; /* Agar otomatis susun ke bawah di layar HP */
+    justify-content: center;
+    gap: 40px;
+    width: 90%; /* Menyesuaikan layout-divider */
+    margin: 80px auto 40px;
+    align-items: flex-start; /* Teks dan Map sejajar tengah secara vertikal */
+}
+
+.harga-text {
+    flex: 1.2; /* Mengambil ruang proporsional */
+    min-width: 300px; /* Batas minimum agar tidak terlalu gepeng */
+    color: #333;
+    line-height: 1.6;
+}
+
+.harga-text h2 {
+    margin-top: 0;
+    font-size: 25px;
+    color: #333; /* Menyamakan warna dengan divider Anda */
+}
+
+.price-group {
+    display: flex;       /* Membuat isi di dalamnya sejajar horizontal */
+    gap: 20px;          /* Jarak antar kotak harga */
+    flex-wrap: wrap;    /* Agar otomatis turun ke bawah jika layar HP terlalu sempit */
+    margin-top: 25px;
+    flex-wrap: nowrap;
+}
+
+.price-tag-exclusive {
+    background: #2f3a40; /* Warna gelap agar teks putih menonjol */
+    color: #fff;
+    padding: 25px;
+    margin-top: 30px;
+    position: relative;
+    display: inline-block;
+    border-left: 10px solid #7ba1a8; /* Aksen Teal dari Lantai I & III */
+    box-shadow: 10px 10px 0px #b8b5ad; /* Shadow kaku sesuai style arsitek */
+}
+
+.label-kecil {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    color: #b8b5ad; /* Warna divider Anda */
+}
+
+.price-value {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+
+
+.harga-frame {
+    flex: 1; /* Nilai lebih besar agar gambar lebih dominan dari teks */
+    min-width: 550px;
+    height: 450px; /* Atur tinggi sesuai keinginan */
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border-radius: 4px; /* Sudut tajam/halus sesuai desain arsitek Anda */
+}
+
+.img-full-display {
+    width: 100% !important; /* Gunakan 100% agar memenuhi frame kanan */
+    height: 100% !important; 
+    object-fit: cover; 
+    filter: grayscale(0%); 
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Transisi lebih halus */
+}
+
+.img-full-display:hover {
+    transform: scale(1.05); /* Zoom tipis saja agar tidak 'over' */
+}
+
+.info-kantor {
+    max-width: 98%;       /* batas maksimal lebarnya */
+    margin: 60px auto;        /* center di layar */
+    padding: 30px 40px;       /* jarak dari isi ke tepi */
+    background-color: #333;   /* warna background */
+    border-radius: 24px;      /* sudut membulat */
+    overflow: hidden;         /* pastikan child ikut radius */
+    box-sizing: border-box;    /* supaya padding tidak nembus lebar */
+}
+
+.header-info {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header-info h1 {
+    font-weight: 48px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.detail-tanah {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 40px; /* baris | kolom */
+    width: 95%;
+}
+
+.detail-tanah .row {
+    display: contents; /* biar grid langsung ke span */
+}
+
+.detail-tanah .label {
+    font-weight: 32px;
+    color: #b8b5ad;
+}
+
+.detail-tanah .value {
+    text-align: right;
+    color: #b8b5ad;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-wrapper img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4/ 3;
+    object-fit: cover;
+    filter: grayscale(100%);
+    display: block;
+}
+
+
+.card.reverse {
+    display: flex;
+    flex-direction: column; 
+}
+
+
+.card.reverse .image-wrapper {
+    order: 2;
+}
+
+.card.reverse .content {
+    order: 1; 
+    border-top: none;
+    border-bottom: 10px solid #b7a99a;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.content h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.teal-border-top {
+    border-top: 10px solid #7ba1a8;
+    margin-top: 5px;
+}
+
+.brown-border-bottom {
+    border-bottom: 10px solid #b7a99a;
+    margin-bottom: 5px;
+}
+
+.layout-divider-4 { 
+    width:100%; /* Mengurangi lebar agar ada sisa putih di kiri-kanan */
+    margin-left: auto; /* Pusatkan ke tengah */
+    margin-right: auto;
+    height: 8px;
+    margin-top: 40px;
+    margin-bottom: 0 auto;
+    background: linear-gradient(to right, 
+        transparent 0%, 
+        transparent 0%, 
+        #fff 0%, 
+        #b8b5ad 100%
+    );
+}
+
+.grid-fasilitas {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.fasilitas-item {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
+
+.fasilitas-item h3 {
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 32px;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.list-ruang {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi teks jadi 2 kolom */
+    gap: 50px;
+}
+
+.list-ruang ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 40px;
+    font-size: 18px;
+}
+
+.list-ruang li {
+    padding: 8px 0;
+    color: #444;
+    position: relative;
+    padding-left: 20px;
+}
+
+.list-ruang li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #7ba1a8; /* Menyesuaikan warna teal sebelumnya */
+    font-weight: bold;
+}
+
+.layout-divider-5 { 
+    width:100%; /* Mengurangi lebar agar ada sisa putih di kiri-kanan */
+    margin-left: auto; /* Pusatkan ke tengah */
+    margin-right: auto;
+    height: 8px;
+    margin-top: 40px;
+    margin-bottom: 0 auto;
+    background: linear-gradient(to right, 
+        transparent 0%, 
+        transparent 0%, 
+        #b8b5ad 0%, 
+        #fff 100%
+    );
+}
+
+.grid-fasilitas-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.fasilitas-item-2 {
+    background-color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
+
+.fasilitas-item-2 h3 {
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 32px;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.list-ruang-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi teks jadi 2 kolom */
+    gap: 50px;
+}
+
+.list-ruang-2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 40px;
+    font-size: 18px;
+}
+
+.list-ruang-2 li {
+    padding: 8px 0;
+    color: #fff;
+    position: relative;
+    padding-left: 20px;
+}
+
+.list-ruang-2 li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #7ba1a8; /* Menyesuaikan warna teal sebelumnya */
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .menu {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .brand{
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+

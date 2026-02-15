@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 80px;
+}
+
+header {
+    background: #fff;
+    color: #333;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+header nav a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+img {
+    width:32px;
+    height:32px;
+    object-fit:cover;
+    border:2px solid #fff;
+    vertical-align:middle;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 22px;
+    border-radius: 999px; /* bikin bulat pill */
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.menu a.active {
+    background: #181c1e;
+    color: #fff;
+}
+
+.menu a:hover {
+    background: #e5e5e5;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.layout-divider-3 { 
+    width:98%; /* Mengurangi lebar agar ada sisa putih di kiri-kanan */
+    border-radius: 999px;
+    margin-left: auto; /* Pusatkan ke tengah */
+    margin-right: auto;
+    height: 8px;
+    margin-top: 40px;
+    margin-bottom: 0 auto;
+    background: linear-gradient(to right, 
+        transparent 0%, 
+        transparent 0%, 
+        #b8b5ad 0%, 
+        #b8b5ad 100%
+    );
+}
+
+/* TITLE */
+.informasi-kantor {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.informasi-title h1 {
+    font-size: 48px;
+    letter-spacing: 6px;
+    color: #2f3a40;
+}
+
+.contact-section {
+    background-color: #2c343a !important; 
+    width:98%;            /* Lebar sama dengan divider */
+    margin: 0 auto;     /* Pusatkan ke tengah */
+    padding: 60px 40px;    /* Memberi ruang agar isi tidak mepet ke pinggir hitam */
+    box-sizing: border-box; 
+    border-radius: 12px;
+    display: block;        /* Memastikan dia bertindak sebagai blok */
+    overflow: hidden;      /* TRICK: Memaksa background mengikuti tinggi konten di dalamnya */
+    clear: both;           /* Membersihkan sisa float dari elemen sebelumnya */
+}
+
+.contact-container {
+    width: 90%; /* Menyesuaikan layout divider Anda */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Kotak Icon Putih */
+.icon-box {
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Kotak Teks Abu-abu Kebiruan */
+.text-box {
+    background-color: #8da1a5; /* Warna sesuai screenshot */
+    color: white;
+    flex: 1;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Bagian Gambar Kanan */
+.contact-image {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .brand{
+        justify-content: center;
+        width: 100%;
+    }
+
+}
